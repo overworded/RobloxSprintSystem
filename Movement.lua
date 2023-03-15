@@ -1,13 +1,9 @@
-local mouseLockController = game.Players.LocalPlayer.PlayerScripts:WaitForChild("PlayerModule").CameraModule.MouseLockController
-
-local obj = mouseLockController:FindFirstChild("BoundKeys")
 local Player = game.Players.LocalPlayer
-local Animations = game.ReplicatedStorage.CharacterAnimations.Run
-local TrailEvent = game.ReplicatedStorage.RemoteEvents.Trail
-
 local Character = Player.Character or Player.CharacterAdded:Wait()
 local LoadedAnim = Character:WaitForChild("Humanoid"):LoadAnimation(script.RunAnimation)
 
+local mouseLockController = game.Players.LocalPlayer.PlayerScripts:WaitForChild("PlayerModule").CameraModule.MouseLockController
+local obj = mouseLockController:FindFirstChild("BoundKeys")
 
 if obj then -- changing shift to lock to control
 	obj.Value = "LeftControl"
